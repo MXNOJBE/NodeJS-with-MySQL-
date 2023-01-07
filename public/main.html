@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CODEMIA</title>
+    <link rel="stylesheet" href="main.css" />
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body>
+
+     <div ng-controller='myCtrl'>
+        <!-- header starts -->
+
+        <div class="header">
+            <div class="header__right">
+                <div class="header__info">
+                    <div class="hader__left">
+                        <img src="https://i.etsystatic.com/11122259/r/il/8c1a6a/1267512024/il_794xN.1267512024_nn2j.jpg" alt="coding_kid"></div>
+                    <h4>Manoj B E</h4>
+                    <nav>
+                        <ul class="nav_links">
+                            <li><a href="#/"></a>Home</li>
+                            <li><a href="#friends">Add </a></li>     
+                            <li><a href="#photos">Photos</a></li>   
+                            <li><a href="#about">About</a></li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    <!-- main body starts -->
+    <div class="main__body">
+        <!-- sidebar starts -->
+        
+
+        <!-- feed starts -->
+        <div class="feed">
+
+
+            <!-- message sender starts -->
+
+                
+
+            <!-- post  1 starts -->
+            <div class="post"  ng-repeat="n in jsondata | filter:test" >
+                <div class="post__top">
+                    <img src="https://i.etsystatic.com/11122259/r/il/8c1a6a/1267512024/il_794xN.1267512024_nn2j.jpg" alt="" srcset="">
+                    <div class="post__topInfo">
+                        <h3>Manoj B E</h3>
+                        <p>{{n.date}} at {{n.time}}</p>
+                    </div>
+                </div>
+
+                <div class="post__bottom">
+                    <p>This is a sample post video</p>
+                </div>
+
+                <div class="post__image">
+                    <video width="980" controls>
+                        <source src="./assets/video_html.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                </div>
+
+                <div class="post__options">
+                    <div class="post__option">
+                        <span class="material-icons">Like </span>
+                    </div>
+
+                    <div class="post__option">
+                        <span class="material-icons"> Comment </span>
+                    </div>
+
+                    <div class="post__option">
+                        <span class="material-icons"> Share </span>
+                    </div>
+                </div>
+            </div>
+
+
+           
+
+        </div>
+        <!-- main body ends -->
+        </div>
+    <script src="./controller.js"></script>
+  </body>
+</html>
